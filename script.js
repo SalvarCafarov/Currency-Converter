@@ -1,6 +1,7 @@
+window.addEventListener('load', e => getInfo(e));
+
 const form = document.forms[0];
-form.addEventListener('submit', e => e.preventDefault());
-form.addEventListener('input', e => getData(e));
+
 const numberMask = IMask(
     document.querySelector('input[name=to]'), {
         mask: Number,
@@ -13,33 +14,35 @@ const numberMaskk = IMask(
         radix: '.',
         mapToRadix: [','],
     });
+form.addEventListener('input', e => getData(e));
 async function getData(e) {
     const data = getFormData();
-
+    const toValue = document.querySelector('input[name=to]');
+    const fromValue = document.querySelector('input[name=from]');
     if (e.target.name !== 'to') {
-        const toValue = document.querySelector('input[name=to]');
-        const fromValue = document.querySelector('input[name=from]');
 
         const valyutaa = await fetch(`https://api.exchangerate.host/latest?base=${data['value-left']}&symbols=${data['value-right']}`).then(response => response.json());
         const rate = valyutaa.rates[`${data['value-right']}`];
 
 
-        if (data.from != '') {
+        if (data.from != '' && data.from != '.') {
             data.to = (data.from * rate).toFixed(2)
         } else {
             data.to = '';
-            data.from = '';
-            fromValue =
+            data.from = ''
+            fromValue.value = ''
         }
         toValue.value = data.to;
+
     } else {
         const valyutaa = await fetch(`https://api.exchangerate.host/latest?base=${data['value-right']}&symbols=${data['value-left']}`).then(response => response.json());
         const rate = valyutaa.rates[`${data['value-left']}`]
-        if (data.to != '') {
+        if (data.to != '' && data.to != '.') {
             data.from = (data.to * rate).toFixed(2)
         } else {
-            data.to = '';
+            data.to = ''
             data.from = '';
+            toValue.value = ''
         }
         fromValue.value = data.from;
     }
