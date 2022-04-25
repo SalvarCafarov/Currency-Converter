@@ -6,13 +6,13 @@ const numberMask = IMask(
     document.querySelector('input[name=to]'), {
         mask: Number,
         radix: '.',
-        mapToRadix: [','],
+        mapToRadix: [',']
     });
 const numberMaskk = IMask(
     document.querySelector('input[name=from]'), {
         mask: Number,
         radix: '.',
-        mapToRadix: [','],
+        mapToRadix: [',']
     });
 form.addEventListener('input', e => getData(e));
 async function getData(e) {
