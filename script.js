@@ -26,7 +26,7 @@ async function getData(e) {
 
 
         if (data.from != '' && data.from != '.') {
-            data.to = (data.from * rate).toFixed(2)
+            data.to = (data.from * rate).toFixed(4)
         } else {
             data.to = '';
             data.from = ''
@@ -38,7 +38,7 @@ async function getData(e) {
         const valyutaa = await fetch(`https://api.exchangerate.host/latest?base=${data['value-right']}&symbols=${data['value-left']}`).then(response => response.json());
         const rate = valyutaa.rates[`${data['value-left']}`]
         if (data.to != '' && data.to != '.') {
-            data.from = (data.to * rate).toFixed(2)
+            data.from = (data.to * rate).toFixed(4)
         } else {
             data.to = ''
             data.from = '';

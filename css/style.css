@@ -35,7 +35,6 @@ a:visited {
     align-items: center;
     background: #F5F5F6;
     height: 7vh;
-    transition: 0.5s;
 }
 
 .logo {
@@ -59,7 +58,6 @@ a:visited {
     letter-spacing: 0.06rem;
     margin-right: 2rem;
     color: #959BA4;
-    transition: 0.5s;
     cursor: pointer;
 }
 
@@ -179,19 +177,19 @@ input[type=text]:focus {
 
 @media (max-width: 1155px) and (min-width: 900px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
 @media(max-width:900px) and (min-width:740px) {
     html {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
 @media(max-width:740px) and (min-width:505px) {
     html {
-        font-size: 7px;
+        font-size: 14px;
     }
     .valyuta-val {
         height: 9vh;
@@ -199,11 +197,50 @@ input[type=text]:focus {
     input[type=text] {
         height: 6vh;
     }
+    .nav-menu {
+        display: none;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .widtg {
+        width: 80%;
+    }
+    .left {
+        margin-bottom: 2rem;
+    }
+    .valyuta-names {
+        margin-bottom: 6%;
+    }
+    .valyuta-val {
+        height: 14vh;
+    }
+    input[type=text] {
+        height: 11vh;
+    }
+    .logo {
+        width: 14%;
+    }
+    .logo img {
+        width: 100%;
+    }
+    .voit {
+        padding: 0.7rem;
+        background: #FFFFFF;
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 0, 8125rem;
+        letter-spacing: 0.06rem;
+        outline: none;
+    }
 }
 
 @media(max-width:505px) and (min-width:375px) {
     html {
-        font-size: 5px;
+        font-size: 11px;
     }
     .logo {
         width: 36px;
@@ -214,11 +251,50 @@ input[type=text]:focus {
     input[type=text] {
         height: 6.5vh;
     }
+    .nav-menu {
+        display: none;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .widtg {
+        width: 80%;
+    }
+    .left {
+        margin-bottom: 2rem;
+    }
+    .valyuta-names {
+        margin-bottom: 6%;
+    }
+    .valyuta-val {
+        height: 14vh;
+    }
+    input[type=text] {
+        height: 11vh;
+    }
+    .logo {
+        width: 14%;
+    }
+    .logo img {
+        width: 100%;
+    }
+    .voit {
+        padding: 0.7rem;
+        background: #FFFFFF;
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 0, 8125rem;
+        letter-spacing: 0.06rem;
+        outline: none;
+    }
 }
 
 @media(max-width:375px) {
     html {
-        font-size: 4px;
+        font-size: 8px;
     }
     .logo {
         width: 25px;
@@ -228,5 +304,44 @@ input[type=text]:focus {
     }
     input[type=text] {
         height: 4.5vh;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .widtg {
+        width: 80%;
+    }
+    .left {
+        margin-bottom: 2rem;
+    }
+    .valyuta-names {
+        margin-bottom: 6%;
+    }
+    .valyuta-val {
+        height: 14vh;
+    }
+    input[type=text] {
+        height: 11vh;
+    }
+    .logo {
+        width: 14%;
+    }
+    .logo img {
+        width: 100%;
+    }
+    .voit {
+        padding: 0.7rem;
+        background: #FFFFFF;
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 0, 8125rem;
+        letter-spacing: 0.06rem;
+        outline: none;
     }
 }
